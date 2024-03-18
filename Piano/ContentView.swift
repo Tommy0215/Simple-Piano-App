@@ -37,6 +37,7 @@ struct ContentView: View {
                     Image(systemName: "star")
                 }.foregroundColor(.black)
                 
+                Text("(500 reviews)")
                 
             }
             .padding()
