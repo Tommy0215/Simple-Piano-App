@@ -9,13 +9,45 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack{
+            Color(.systemMint)
+                .ignoresSafeArea()
+            
+            VStack{
+                HStack{
+                    Image(systemName: "star")
+                    Text("Starry night")
+                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    Image(systemName: "star.fill")
+                }
+                
+                Image("starry")
+                    .resizable()
+                    .cornerRadius(20)
+                    .aspectRatio(contentMode:.fit)
+                    .padding(.all)
+                
+                //Review stars
+                HStack{
+                    Image(systemName: "star.fill")
+                    Image(systemName: "star.fill")
+                    Image(systemName: "star.leadinghalf.filled")
+                    Image(systemName: "star")
+                    Image(systemName: "star")
+                }.foregroundColor(.black)
+                
+                
+            }
+            .padding()
+            .background(Rectangle()
+                .foregroundColor(.white)
+                .cornerRadius(15)
+                .shadow(radius: 15))
+            .padding()
+            
         }
-        .padding()
+        
     }
 }
 
