@@ -54,7 +54,7 @@ struct ContentView: View {
                 Button(action: {
                                 // Add your button action code here
                                 self.isStarClicked.toggle()
-                                print("Button tapped!")
+                                print("Button tapped!!")
                             }) {
                                 Image(systemName: isStarClicked ? "star.fill" : "star")
                                     .resizable()
